@@ -19,7 +19,7 @@
 }
 .game-container .board-container .board-row .board-cell span {
   display: block;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   text-align: center;
   margin: 14% 0;
 }
@@ -142,7 +142,7 @@
   flex: 1;
 }
 .game-container .stats .ngame button {
-  display: flex;
+  /* display: flex; */
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -341,7 +341,7 @@
   background-image: -o-linear-gradient(right bottom, #a8e9ff 5%, #4a3ef0 25%, #3ef053 52%, #ff8d00 80%, #f7f734 100%);
   background-image: -ms-linear-gradient(right bottom, #a8e9ff 5%, #4a3ef0 25%, #3ef053 52%, #ff8d00 80%, #f7f734 100%);
   background-image: -webkit-gradient(linear, right bottom, left top, color-stop(5%, #a8e9ff), color-stop(25%, #4a3ef0), color-stop(52%, #3ef053), color-stop(80%, #ff8d00), color-stop(100%, #f7f734));
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0f3fa', endColorstr='#b6dffd',GradientType=1);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0f3fa', endColorstr='#b6dffd',GradientType=1); */
   /* IE6-9 fallback on horizontal gradient */
   box-shadow: 0 0 10px rgba(2, 97, 97, 0.78);
   border: 1px solid #7977fb;
@@ -355,27 +355,27 @@
 }
 .game-container.colorful .board-container .board-row .board-cell.num2, .game-container.colorful .board-container .board-row .board-cell.num256 {
   background-color: #2ef245;
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#2ef245, endColorstr=#cbff70);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#2ef245, endColorstr=#cbff70);
   background-image: -moz-linear-gradient(left bottom, #2ef245 0%, #cbff70 100%);
   background-image: -webkit-linear-gradient(left bottom, #2ef245 0%, #cbff70 100%);
   background-image: -ms-linear-gradient(left bottom, #2ef245 0%, #cbff70 100%);
   background-image: linear-gradient(left bottom, #2ef245 0%, #cbff70 100%);
   background-image: -o-linear-gradient(left bottom, #2ef245 0%, #cbff70 100%);
-  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #2ef245), color-stop(100%, #cbff70));
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #2ef245), color-stop(100%, #cbff70)); */
   color: #000;
   font-size: 36px;
   font-weight: 600;
   box-shadow: 0 0 2px #fff;
 }
 .game-container.colorful .board-container .board-row .board-cell.num4, .game-container.colorful .board-container .board-row .board-cell.num512 {
-  background-color: #4b2ef2;
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#4b2ef2, endColorstr=#5bc4f5);
+  background-color: #b8b0e6;
+  /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#4b2ef2, endColorstr=#5bc4f5);
   background-image: -moz-linear-gradient(left bottom, #4b2ef2 0%, #5bc4f5 100%);
   background-image: -webkit-linear-gradient(left bottom, #4b2ef2 0%, #5bc4f5 100%);
   background-image: -ms-linear-gradient(left bottom, #4b2ef2 0%, #5bc4f5 100%);
   background-image: linear-gradient(left bottom, #4b2ef2 0%, #5bc4f5 100%);
   background-image: -o-linear-gradient(left bottom, #4b2ef2 0%, #5bc4f5 100%);
-  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #4b2ef2), color-stop(100%, #5bc4f5));
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #4b2ef2), color-stop(100%, #5bc4f5)); */
   color: #000;
   font-size: 36px;
   font-weight: 600;
@@ -383,13 +383,13 @@
 }
 .game-container.colorful .board-container .board-row .board-cell.num8, .game-container.colorful .board-container .board-row .board-cell.num1024 {
   background-color: #f0b222;
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#f0b222, endColorstr=#4251f5);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#f0b222, endColorstr=#4251f5);
   background-image: -moz-linear-gradient(right bottom, #f0b222 21%, #4251f5 81%);
   background-image: -webkit-linear-gradient(right bottom, #f0b222 21%, #4251f5 81%);
   background-image: -ms-linear-gradient(right bottom, #f0b222 21%, #4251f5 81%);
   background-image: linear-gradient(right bottom, #f0b222 21%, #4251f5 81%);
   background-image: -o-linear-gradient(right bottom, #f0b222 21%, #4251f5 81%);
-  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(21%, #f0b222), color-stop(81%, #4251f5));
+  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(21%, #f0b222), color-stop(81%, #4251f5)); */
   color: #fff;
   font-size: 36px;
   font-weight: 600;
@@ -397,13 +397,13 @@
 }
 .game-container.colorful .board-container .board-row .board-cell.num16, .game-container.colorful .board-container .board-row .board-cell.num2048 {
   background-color: #fc8d77;
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#fc8d77, endColorstr=#a673ff);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#fc8d77, endColorstr=#a673ff);
   background-image: -moz-linear-gradient(right bottom, #fc8d77 0%, #a673ff 81%);
   background-image: -webkit-linear-gradient(right bottom, #fc8d77 0%, #a673ff 81%);
   background-image: -ms-linear-gradient(right bottom, #fc8d77 0%, #a673ff 81%);
   background-image: linear-gradient(right bottom, #fc8d77 0%, #a673ff 81%);
   background-image: -o-linear-gradient(right bottom, #fc8d77 0%, #a673ff 81%);
-  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0%, #fc8d77), color-stop(81%, #a673ff));
+  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0%, #fc8d77), color-stop(81%, #a673ff)); */
   color: #000;
   font-size: 36px;
   font-weight: 600;
@@ -411,13 +411,13 @@
 }
 .game-container.colorful .board-container .board-row .board-cell.num32, .game-container.colorful .board-container .board-row .board-cell.num4096 {
   background-color: #ffff29;
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#ffff29, endColorstr=#ff73ce);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#ffff29, endColorstr=#ff73ce);
   background-image: -moz-linear-gradient(right bottom, #ffff29 0%, #ff73ce 81%);
   background-image: -webkit-linear-gradient(right bottom, #ffff29 0%, #ff73ce 81%);
   background-image: -ms-linear-gradient(right bottom, #ffff29 0%, #ff73ce 81%);
   background-image: linear-gradient(right bottom, #ffff29 0%, #ff73ce 81%);
   background-image: -o-linear-gradient(right bottom, #ffff29 0%, #ff73ce 81%);
-  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0%, #ffff29), color-stop(81%, #ff73ce));
+  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0%, #ffff29), color-stop(81%, #ff73ce)); */
   color: #000;
   font-size: 36px;
   font-weight: 600;
@@ -425,13 +425,13 @@
 }
 .game-container.colorful .board-container .board-row .board-cell.num64 {
   background-color: #a2a8eb;
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#a2a8eb, endColorstr=#b5b5b5);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#a2a8eb, endColorstr=#b5b5b5);
   background-image: -moz-linear-gradient(right bottom, #a2a8eb 0%, #b5b5b5 81%);
   background-image: -webkit-linear-gradient(right bottom, #a2a8eb 0%, #b5b5b5 81%);
   background-image: -ms-linear-gradient(right bottom, #a2a8eb 0%, #b5b5b5 81%);
   background-image: linear-gradient(right bottom, #a2a8eb 0%, #b5b5b5 81%);
   background-image: -o-linear-gradient(right bottom, #a2a8eb 0%, #b5b5b5 81%);
-  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0%, #a2a8eb), color-stop(81%, #b5b5b5));
+  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(0%, #a2a8eb), color-stop(81%, #b5b5b5)); */
   color: #000;
   font-size: 36px;
   font-weight: 600;
@@ -439,13 +439,13 @@
 }
 .game-container.colorful .board-container .board-row .board-cell.num128 {
   background-color: #3d8ef2;
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#3d8ef2, endColorstr=#68cf5d);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#3d8ef2, endColorstr=#68cf5d);
   background-image: -moz-linear-gradient(left bottom, #3d8ef2 11%, #68cf5d 51%, #f0b52e 86%);
   background-image: linear-gradient(left bottom, #3d8ef2 11%, #68cf5d 51%, #f0b52e 86%);
   background-image: -webkit-linear-gradient(left bottom, #3d8ef2 11%, #68cf5d 51%, #f0b52e 86%);
   background-image: -o-linear-gradient(left bottom, #3d8ef2 11%, #68cf5d 51%, #f0b52e 86%);
   background-image: -ms-linear-gradient(left bottom, #3d8ef2 11%, #68cf5d 51%, #f0b52e 86%);
-  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(11%, #3d8ef2), color-stop(51%, #68cf5d), color-stop(86%, #f0b52e));
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(11%, #3d8ef2), color-stop(51%, #68cf5d), color-stop(86%, #f0b52e)); */
   color: #000;
   font-size: 36px;
   font-weight: 600;
