@@ -9,7 +9,6 @@ import { Component,
          ElementRef 
        } from '@angular/core';
 import { GameService } from './game.service';
-var html2canvas = require("html2canvas");
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -19,7 +18,7 @@ var html2canvas = require("html2canvas");
 })
 export class AppComponent  {
  private _config: any;
-  @ViewChild('game') el:ElementRef;
+  @ViewChild('game', {read: false, static: false}) el:ElementRef;
 
   @Input() get config() {
     return this._config;
@@ -142,18 +141,5 @@ export class AppComponent  {
           this.cdr.detectChanges();
         }, 200);
     }
-  }
-
-  screenshot() {
-    let doc: HTMLElement = this.el.nativeElement;
-    html2canvas(doc).then(canvas => {
-      var myImage = canvas.toDataURL("image/png");
-      var link = document.createElement("a");
-      link.download = `Image_2024_score_${this.score}.png`;
-      link.href = 'data: '+myImage;
-      link.click();
-    }).catch(err => {
-
-    })
   }
 }
