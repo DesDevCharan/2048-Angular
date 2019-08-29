@@ -3,6 +3,9 @@
   padding: 10px;
   margin: 0 auto;
 }
+.board-row span {
+  font-size: 36px;
+}
 .game-container .board-container {
   position: relative;
   animation: MyAnimation 1s;

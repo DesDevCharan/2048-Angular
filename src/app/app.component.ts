@@ -1,24 +1,25 @@
-import { Component, 
-         OnInit, 
-         Input, 
-         Output, 
-         AfterViewInit, 
-         ChangeDetectorRef, 
-         HostListener,
-         ViewChild,
-         ElementRef 
-       } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  AfterViewInit,
+  ChangeDetectorRef,
+  HostListener,
+  ViewChild,
+  ElementRef
+} from '@angular/core';
 import { GameService } from './game.service';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ],
-    providers: [GameService]
+  styleUrls: ['./app.component.css'],
+  providers: [GameService]
 
 })
-export class AppComponent  {
- private _config: any;
-  @ViewChild('game', {read: false, static: false}) el:ElementRef;
+export class AppComponent {
+  private _config: any;
+  @ViewChild('game', { read: false, static: false }) el: ElementRef;
 
   @Input() get config() {
     return this._config;
@@ -47,7 +48,7 @@ export class AppComponent  {
   constructor(
     private gameService: GameService,
     private cdr: ChangeDetectorRef
-  ) { 
+  ) {
   }
 
   ngOnInit() {
@@ -66,7 +67,6 @@ export class AppComponent  {
     this.highScore = this.gameService.getHighscore();
     this.allThemes = this.gameService.getAllThemes();
     this.cdr.detectChanges();
-
   }
 
   newgame() {
@@ -102,7 +102,6 @@ export class AppComponent  {
           this.swipe(this.SWIPE_ACTION.RIGHT);
           break;
         default:
-          // do nothing
       }
     }
   }
@@ -134,12 +133,12 @@ export class AppComponent  {
     let lastMove = this.gameService.getLastMoveDetails();
 
     if (lastMove.moves && lastMove.moves > 0) {
-        this.actionAllowed = false;
-        setTimeout(() => {
-          this.gameService.setRandomNoPos();
-          this.actionAllowed = true;
-          this.cdr.detectChanges();
-        }, 200);
+      this.actionAllowed = false;
+      setTimeout(() => {
+        this.gameService.setRandomNoPos();
+        this.actionAllowed = true;
+        this.cdr.detectChanges();
+      }, 200);
     }
   }
 }

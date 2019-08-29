@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class GameService {
 
-  private defaultConfig:any = {};
+  private defaultConfig: any = {};
 
-  private SUPPORTED_THEMES: string[] = ['dark', 'colorful' ];
+  private SUPPORTED_THEMES: string[] = ['dark', 'colorful'];
 
   private STORAGE_NAME = 'app_2048_storage';
 
@@ -17,7 +17,7 @@ export class GameService {
 
   private lastMoveDetails: any = {};
 
-  constructor() { 
+  constructor() {
     this.defaultConfig = {
       grid: 4, // no of grid to show
       touch: true, // touch support
@@ -32,40 +32,6 @@ export class GameService {
     this.init();
   }
 
-  public test() {
-    // this.init();
-    // console.log('after init');
-    // this.debug();
-    // this.changeState('LEFT');
-    // console.log('after left');
-    // this.debug();
-    // this.setRandomNoPos();
-    // console.log('after new elem');
-    // this.debug();
-    // this.changeState('LEFT');
-    // console.log('after left again');
-    // this.debug();
-    // this.setRandomNoPos();
-    // console.log('after new elem again');
-    // this.debug();
-  }
-
-  /**
-   * for print debug display
-   */
-  public debug() {
-    let s = [];
-    s = this.gameState.map(x => {
-      return x.join(' | ');
-    });
-    console.log('----------------------', new Date().getTime());
-    let y = 0;
-    s.forEach(x => {
-      console.log('', y , ' ||', x);
-      y++;
-    });
-    console.log('----------------------');
-  }
 
   /**
    * init the game, check localstorage if config permit
@@ -91,7 +57,7 @@ export class GameService {
     const size = this.defaultConfig.grid;
     for (let i = 0; i < size; i++) {
       let arr = [];
-      for (let j = 0; j < size; j++ ) { arr.push(0); }
+      for (let j = 0; j < size; j++) { arr.push(0); }
       this.gameState.push(arr);
     }
     this.highScore = this.highScore == undefined ? 0 : this.highScore;
@@ -113,7 +79,7 @@ export class GameService {
     for (let i = 0; i < this.gameState.length; i++) {
       for (let j = 0; j < this.gameState[i].length; j++) {
         if (this.gameState[i][j] === 0) {
-          emptyPositions.push({i: i, j: j});
+          emptyPositions.push({ i: i, j: j });
         }
       }
     }
@@ -135,7 +101,7 @@ export class GameService {
   }
 
   public changeTheme(theme: string) {
-    this.defaultConfig.theme = this.SUPPORTED_THEMES.indexOf(theme) >= 0 ? theme: this.defaultConfig.theme;
+    this.defaultConfig.theme = this.SUPPORTED_THEMES.indexOf(theme) >= 0 ? theme : this.defaultConfig.theme;
     this.saveConfig(this.defaultConfig);
   }
 
@@ -157,7 +123,7 @@ export class GameService {
        * will stack from last, to 0
        */
       case 'RIGHT':
-      this.gameState = this.moveRight(this.gameState);
+        this.gameState = this.moveRight(this.gameState);
         break;
       /**
        * from down to up
@@ -205,7 +171,6 @@ export class GameService {
   public storeGameState(gameState: any) {
     this.gameState = gameState;
     if (this.defaultConfig && this.defaultConfig.rememberState) {
-      // tslint:disable-next-line:prefer-const
       let currentState = this.getState();
       currentState.gameState = gameState;
       this.saveState(currentState);
@@ -227,7 +192,6 @@ export class GameService {
     this.mergeConfig(config);
 
     if (this.defaultConfig && this.defaultConfig.rememberState) {
-      // tslint:disable-next-line:prefer-const
       let st = this.getState();
       st.config = this.defaultConfig;
       this.saveState(st);
@@ -261,7 +225,6 @@ export class GameService {
   public deleteHighScore() {
     this.highScore = 0;
     if (this.defaultConfig && this.defaultConfig.rememberState) {
-      // tslint:disable-next-line:prefer-const
       let st = this.getState();
       st.highScore = 0;
       this.saveState(st);
@@ -281,13 +244,11 @@ export class GameService {
    */
   public saveScore(score: number) {
     this.score = score;
-
-    if(this.score > this.highScore) {
+    if (this.score > this.highScore) {
       this.saveHighScore(this.score);
     }
 
     if (this.defaultConfig && this.defaultConfig.rememberState) {
-      // tslint:disable-next-line:prefer-const
       let st = this.getState();
       st.score = score;
       this.saveState(st);
@@ -300,7 +261,6 @@ export class GameService {
   public deleteScore() {
     this.score = 0;
     if (this.defaultConfig && this.defaultConfig.rememberState) {
-      // tslint:disable-next-line:prefer-const
       let st = this.getState();
       st.score = 0;
       this.saveState(st);
@@ -312,7 +272,6 @@ export class GameService {
    * @param m an array
    */
   private transpose(m) {
-    // tslint:disable-next-line:no-shadowed-variable
     return m[0].map((x, i) => m.map(x => x[i]));
   }
 
@@ -362,7 +321,7 @@ export class GameService {
             noOfMoves++;
             continue;
           }
-          if (myState[i][j] !== 0 && myState[i][k] !==0) {
+          if (myState[i][j] !== 0 && myState[i][k] !== 0) {
             break;
           }
         }
@@ -447,7 +406,7 @@ export class GameService {
             score += myState[i][j];
             continue;
           }
-          if (myState[i][j] !== 0 && myState[i][k] !==0) {
+          if (myState[i][j] !== 0 && myState[i][k] !== 0) {
             break;
           }
         }
@@ -479,8 +438,8 @@ export class GameService {
       currentState = {};
     } else {
       try {
-        currentState  = JSON.parse(currentState);
-      } catch (er) {}
+        currentState = JSON.parse(currentState);
+      } catch (er) { }
     }
     return currentState;
   }
